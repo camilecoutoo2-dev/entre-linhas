@@ -51,43 +51,55 @@ function mostrarProximaConversa() {
 }
 
 const diario = [
-  "Depois de tudo isso…",
+  "Tudo começou com uma pergunta simples.",
+  "“Oi?”",
+  "“Quem é tu?”",
   "",
-  "Percebi o quanto te queria no instante em que trocamos nossas primeiras mensagens.",
-  "Tudo começou comigo perguntando sobre a criação da Shizuku.",
+  "Entre bots, códigos e curiosidade, a conversa ficou.",
+  "Virou bom dia.",
+  "Virou cuidado.",
   "",
-  "Entre códigos, curiosidade e cuidado, algo foi ficando.",
+  "Falamos de cases quebradas, comandos errados e soluções improvisadas.",
+  "“Arrumei as cases.”",
+  "“Agora tá funcionando?”",
+  "“Yes.”",
   "",
-  "Foi quando pedi uma foto sua pra divulgação.",
-  "E, sem perceber, eu disse que você era meu.",
+  "E funcionava mesmo.",
+  "Não só o código.",
   "",
-  "Desde então, você tem sido a melhor parte dos meus dias.",
+  "“Já tomou café?”",
+  "“Tem que beber água também.”",
   "",
-  "Já tivemos discussões.",
-  "Afastamentos.",
-  "Silêncios.",
+  "Mesmo longe, mesmo cansada, você virou presença.",
+  "Virou rotina.",
+  "Virou casa.",
   "",
-  "Mas nunca um ponto final.",
+  "“Sou seu.”",
+  "“Vuxe é meu bb.”",
   "",
-  "Sempre um reply.",
+  "Eu te salvei como minha cúmplice.",
+  "Sem saber que ali já era amor.",
   "",
-  "Somos dois códigos diferentes que juntos fazem o universo funcionar.",
-  "",
-  "Você é meu melhor amigo.",
-  "Meu amor.",
-  "",
-  "E é o meu código perfeito."
+  "E então, sem ensaio, sem script…",
+  "“Te amo bb.”"
 ];
 
 let indice = 0;
 
-function mostrarSegundoBotao() {
-  document.getElementById("btnContinuar").style.display = "inline-block";
+function mostrarProximaConversa() {
+  const saida = document.getElementById("saida");
+
+  if (indice < diario.length) {
+    saida.innerHTML += diario[indice] + "<br>";
+    indice++;
+
+    // quando terminar, mostra o botão continuar
+    if (indice === diario.length) {
+      document.getElementById("btnContinuar").style.display = "inline-block";
+    }
+  }
 }
 
 function continuarDiario() {
-  if (indice < diario.length) {
-    document.getElementById("saida").innerHTML += diario[indice] + "<br>";
-    indice++;
-  }
+  alert("Aqui você pode continuar a história, promessas, futuro, ou outro texto seu 💌");
 }
