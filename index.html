@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,54 +19,31 @@
     <p>A gente se reconheceu.</p>
   </section>
 
-  <section class="conversa fade">
+  <!-- BOTÕES -->
+  <section class="botoes fade">
+    <button onclick="mostrar('inicio')">Como tudo começou</button>
+    <button onclick="mostrar('pensamentos')">O que eu nunca disse</button>
+    <button onclick="mostrar('promessa')">Minha promessa</button>
+    <button class="perigo" onclick="mostrar('segredo')">Não clique</button>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section id="inicio" class="conteudo oculto">
     <p class="data">02/12 — 21:31</p>
     <p>Quem é tu?</p>
     <p>Slk</p>
     <p>Jpzinh</p>
     <p class="destaque">Aaaaaaaaaaah… é vuxe.</p>
-  </section>
 
-  <section class="autor fade">
-    <p>
-      Eu percebi ali.<br>
-      Não era só bot.<br>
-      Era atenção.
-    </p>
-  </section>
-
-  <section class="conversa fade">
-    <p>Bom dia bb</p>
-    <p>Já tomou café?</p>
-    <p>Vai comer.</p>
-    <p>Beba água.</p>
-    <p class="destaque">Você não pode ficar sem comer.</p>
-  </section>
-
-  <section class="codigo fade">
-<pre>
-case 'namorar':
-{
-  // não era só brincadeira
-}
-</pre>
-    <p class="legenda">
-      A gente brincou de código,<br>
-      mas o sentimento foi real.
-    </p>
-  </section>
-
-  <section class="conversa fade">
     <p class="destaque">Vuxe é meu bb</p>
     <p>Sou seu</p>
+
+    <h2 class="teamo">Te amo bb</h2>
   </section>
 
-  <section class="teamo fade">
-    <h2>Te amo bb</h2>
-  </section>
-
-  <section class="autor destaque-texto fade">
-    <p>
+  <!-- TEXTO AUTORAL -->
+  <section id="pensamentos" class="conteudo oculto">
+    <p class="autor">
       Percebi o quanto te queria no instante em que trocamos nossas primeiras mensagens.<br><br>
 
       Tudo começou quando te perguntei sobre a criação da Shizuku.<br>
@@ -95,12 +73,30 @@ case 'namorar':
     </p>
   </section>
 
-  <section class="final fade">
-    <p>— sua cúmplice</p>
+  <!-- PROMESSA -->
+  <section id="promessa" class="conteudo oculto">
+    <p class="autor destaque-texto">
+      Eu prometo continuar.<br>
+      Mesmo nos dias difíceis.<br>
+      Mesmo quando o código falhar.<br><br>
+
+      Porque com você,<br>
+      sempre vale a pena compilar de novo.
+    </p>
+  </section>
+
+  <!-- SEGREDO -->
+  <section id="segredo" class="conteudo oculto">
+    <p class="autor">
+      Se você chegou até aqui…<br><br>
+      é porque já faz parte disso.<br><br>
+
+      — sua cúmplice 🖤
+    </p>
   </section>
 
 </main>
 
 <script src="script.js"></script>
 </body>
-  </html>
+</html>
