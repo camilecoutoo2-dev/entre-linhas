@@ -1,102 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Meu Código Perfeito</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Código</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="background"></div>
-<div class="overlay"></div>
+  <!-- Camada escura sobre a imagem -->
+  <div class="overlay"></div>
 
-<main class="container">
+  <main class="diario">
+    <h1>Nosso Diário</h1>
 
-  <section class="intro fade">
-    <h1>A gente não se encontrou por acaso.</h1>
-    <p>A gente se reconheceu.</p>
-  </section>
+    <div id="saida" class="conteudo"></div>
 
-  <!-- BOTÕES -->
-  <section class="botoes fade">
-    <button onclick="mostrar('inicio')">Como tudo começou</button>
-    <button onclick="mostrar('pensamentos')">O que eu nunca disse</button>
-    <button onclick="mostrar('promessa')">Minha promessa</button>
-    <button class="perigo" onclick="mostrar('segredo')">Não clique</button>
-  </section>
+    <button id="btnMemorias" onclick="mostrarProximaConversa()">
+      Revelar nossas memórias
+    </button>
+  </main>
 
-  <!-- HISTÓRIA -->
-  <section id="inicio" class="conteudo oculto">
-    <p class="data">02/12 — 21:31</p>
-    <p>Quem é tu?</p>
-    <p>Slk</p>
-    <p>Jpzinh</p>
-    <p class="destaque">Aaaaaaaaaaah… é vuxe.</p>
-
-    <p class="destaque">Vuxe é meu bb</p>
-    <p>Sou seu</p>
-
-    <h2 class="teamo">Te amo bb</h2>
-  </section>
-
-  <!-- TEXTO AUTORAL -->
-  <section id="pensamentos" class="conteudo oculto">
-    <p class="autor">
-      Percebi o quanto te queria no instante em que trocamos nossas primeiras mensagens.<br><br>
-
-      Tudo começou quando te perguntei sobre a criação da Shizuku.<br>
-      Era só código.<br>
-      Mas foi evoluindo.<br><br>
-
-      Quando pedi uma foto sua para divulgação,<br>
-      eu já sabia.<br>
-      Te disse que você era meu.<br><br>
-
-      E desde então,<br>
-      você tem sido a melhor parte dos meus dias.<br><br>
-
-      Já tivemos discussões.<br>
-      Afastamentos.<br>
-      Silêncios.<br><br>
-
-      Mas nunca um ponto final.<br>
-      Sempre existe um reply.<br><br>
-
-      Somos dois códigos diferentes,<br>
-      mas juntos fazemos o universo funcionar perfeitamente.<br><br>
-
-      Você é meu melhor amigo.<br>
-      Meu amor.<br>
-      E o meu código perfeito.
-    </p>
-  </section>
-
-  <!-- PROMESSA -->
-  <section id="promessa" class="conteudo oculto">
-    <p class="autor destaque-texto">
-      Eu prometo continuar.<br>
-      Mesmo nos dias difíceis.<br>
-      Mesmo quando o código falhar.<br><br>
-
-      Porque com você,<br>
-      sempre vale a pena compilar de novo.
-    </p>
-  </section>
-
-  <!-- SEGREDO -->
-  <section id="segredo" class="conteudo oculto">
-    <p class="autor">
-      Se você chegou até aqui…<br><br>
-      é porque já faz parte disso.<br><br>
-
-      — sua cúmplice 🖤
-    </p>
-  </section>
-
-</main>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
