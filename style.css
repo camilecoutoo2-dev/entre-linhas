@@ -1,4 +1,4 @@
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,107 +6,70 @@
 }
 
 body {
+  min-height: 100vh;
+  background: url("fundo.jpg") no-repeat center center fixed;
+  background-size: cover;
   color: #f2f2f2;
 }
 
-.background {
-  position: fixed;
-  inset: 0;
-  background: url('fundo.jpg') center/cover no-repeat;
-  filter: grayscale(100%);
-  z-index: -2;
-}
-
+/* camada escura pra dar clima */
 .overlay {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
 }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
+.diario {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
 }
 
-section {
-  margin-bottom: 60px;
-}
-
-h1 {
-  font-size: 2.5rem;
+.diario h1 {
+  font-size: 2.8rem;
+  margin-bottom: 40px;
   text-align: center;
+  letter-spacing: 2px;
 }
 
-p {
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   font-size: 1.3rem;
   line-height: 1.8;
 }
 
-.data {
-  opacity: 0.6;
-  font-size: 0.9rem;
+.linha {
+  animation: aparecer 1s ease forwards;
+  opacity: 0;
 }
 
-.destaque {
-  color: #ff4d6d;
-  font-weight: bold;
-}
-
-.teamo {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 2.5rem;
-  color: #ff4d6d;
-}
-
-.autor {
-  font-style: italic;
-  text-align: center;
-}
-
-.botoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+@keyframes aparecer {
+  to {
+    opacity: 1;
+  }
 }
 
 button {
-  padding: 12px 20px;
+  margin-top: 50px;
+  align-self: center;
+  padding: 15px 35px;
+  font-size: 1.1rem;
   background: transparent;
-  border: 1px solid #ff4d6d;
   color: #fff;
-  font-size: 1rem;
+  border: 1px solid #fff;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 button:hover {
-  background: #ff4d6d;
-}
-
-button.perigo:hover {
-  background: darkred;
-  border-color: darkred;
-}
-
-.oculto {
-  display: none;
-}
-
-.conteudo {
-  animation: surgir 0.8s ease forwards;
-}
-
-@keyframes surgir {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  background: #fff;
+  color: #000;
 }
