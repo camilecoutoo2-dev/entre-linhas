@@ -1,70 +1,37 @@
-body {
-  margin: 0;
-  font-family: 'Georgia', serif;
-  background: #000;
-  color: #f2f2f2;
-  text-align: center;
+  let modoEscuro = true;
+
+function mostrarMensagem() {
+  document.getElementById("saida").innerText =
+    "Eu te amo porque com você eu posso ser intensa sem medo. Porque você entende meu silêncio e respeita meu caos.";
 }
 
-.container {
-  padding: 30px 20px;
-  max-width: 600px;
-  margin: auto;
+function mostrarConversas() {
+  document.getElementById("saida").innerText =
+    "Tudo começou com bots, códigos e curiosidade… e sem perceber, você virou casa.";
 }
 
-h1 {
-  font-size: 2.6rem;
-  margin-bottom: 25px;
+function mostrarPromessa() {
+  document.getElementById("saida").innerText =
+    "Prometo continuar escolhendo você. Mesmo nos dias difíceis. Mesmo quando o mundo pesar.";
 }
 
-.intro {
-  font-size: 1.4rem;
-  line-height: 1.8;
-  margin-bottom: 30px;
+function mudarFundo() {
+  if (modoEscuro) {
+    document.body.style.background = "#1a1a1a";
+    document.body.style.color = "#f5f5f5";
+  } else {
+    document.body.style.background = "#000";
+    document.body.style.color = "#f2f2f2";
+  }
+  modoEscuro = !modoEscuro;
 }
 
-.foto img {
-  width: 80%;
-  max-width: 420px;
-  border-radius: 12px;
-  border: 2px solid #8b0000;
-  box-shadow: 0 0 25px rgba(139, 0, 0, 0.6);
-  margin-bottom: 30px;
+function reiniciar() {
+  document.getElementById("saida").innerText =
+    "Se eu tivesse que começar de novo, escolheria você outra vez.";
 }
 
-.botoes {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+function mostrarSegredoEspecial() {
+  document.getElementById("saida").innerText =
+    "Você não é só meu namorado. Você é meu lugar seguro, minha mente favorita e meu amor mais intenso.";
 }
-
-.botoes button {
-  padding: 16px;
-  font-size: 1.1rem;
-  background: transparent;
-  color: #8b0000;
-  border: 1px solid #8b0000;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.botoes button:hover {
-  background: #8b0000;
-  color: #000;
-}
-
-.saida {
-  margin-top: 30px;
-  font-size: 1.3rem;
-  color: #ffcccc;
-  min-height: 60px;
-}
-
-.secreto {
-  margin-top: 40px;
-  background: none;
-  color: #444;
-  border: none;
-  font-size: 0.9rem;
-  cursor: pointer;
-    }
