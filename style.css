@@ -1,4 +1,4 @@
-* {
+  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,6 @@
 
 body {
   color: #f2f2f2;
-  overflow-x: hidden;
 }
 
 .background {
@@ -32,7 +31,7 @@ body {
 }
 
 section {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 h1 {
@@ -40,16 +39,9 @@ h1 {
   text-align: center;
 }
 
-h2 {
-  font-size: 3rem;
-  text-align: center;
-  color: #ff4d6d;
-}
-
 p {
   font-size: 1.3rem;
   line-height: 1.8;
-  margin-bottom: 10px;
 }
 
 .data {
@@ -62,47 +54,59 @@ p {
   font-weight: bold;
 }
 
-.autor p {
-  font-style: italic;
-  text-align: center;
-  opacity: 0.9;
-}
-
-.codigo pre {
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-left: 4px solid #ff4d6d;
-  font-size: 1rem;
-  overflow-x: auto;
-}
-
-.legenda {
-  margin-top: 15px;
-  font-style: italic;
-  opacity: 0.85;
-}
-
 .teamo {
-  margin-top: 120px;
-}
-
-.destaque-texto p {
-  font-size: 1.4rem;
-}
-
-.final {
+  margin-top: 40px;
   text-align: center;
-  opacity: 0.7;
+  font-size: 2.5rem;
+  color: #ff4d6d;
 }
 
-/* animação */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.8s ease;
+.autor {
+  font-style: italic;
+  text-align: center;
 }
 
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 20px;
+  background: transparent;
+  border: 1px solid #ff4d6d;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff4d6d;
+}
+
+button.perigo:hover {
+  background: darkred;
+  border-color: darkred;
+}
+
+.oculto {
+  display: none;
+}
+
+.conteudo {
+  animation: surgir 0.8s ease forwards;
+}
+
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
