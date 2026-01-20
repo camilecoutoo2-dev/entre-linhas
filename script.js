@@ -49,3 +49,45 @@ function mostrarProximaConversa() {
       "Esse sempre foi você 🖤";
   }
 }
+
+const diario = [
+  "Depois de tudo isso…",
+  "",
+  "Percebi o quanto te queria no instante em que trocamos nossas primeiras mensagens.",
+  "Tudo começou comigo perguntando sobre a criação da Shizuku.",
+  "",
+  "Entre códigos, curiosidade e cuidado, algo foi ficando.",
+  "",
+  "Foi quando pedi uma foto sua pra divulgação.",
+  "E, sem perceber, eu disse que você era meu.",
+  "",
+  "Desde então, você tem sido a melhor parte dos meus dias.",
+  "",
+  "Já tivemos discussões.",
+  "Afastamentos.",
+  "Silêncios.",
+  "",
+  "Mas nunca um ponto final.",
+  "",
+  "Sempre um reply.",
+  "",
+  "Somos dois códigos diferentes que juntos fazem o universo funcionar.",
+  "",
+  "Você é meu melhor amigo.",
+  "Meu amor.",
+  "",
+  "E é o meu código perfeito."
+];
+
+let indice = 0;
+
+function mostrarSegundoBotao() {
+  document.getElementById("btnContinuar").style.display = "inline-block";
+}
+
+function continuarDiario() {
+  if (indice < diario.length) {
+    document.getElementById("saida").innerHTML += diario[indice] + "<br>";
+    indice++;
+  }
+}
