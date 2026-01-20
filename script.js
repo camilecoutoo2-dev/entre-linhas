@@ -1,37 +1,51 @@
-  let modoEscuro = true;
+let indice = 0;
 
-function mostrarMensagem() {
-  document.getElementById("saida").innerText =
-    "Eu te amo porque com você eu posso ser intensa sem medo. Porque você entende meu silêncio e respeita meu caos.";
-}
+const conversas = [
+  "Tudo começou com uma pergunta simples.",
+  "“Oi?”",
+  "“Quem é tu?”",
 
-function mostrarConversas() {
-  document.getElementById("saida").innerText =
-    "Tudo começou com bots, códigos e curiosidade… e sem perceber, você virou casa.";
-}
+  "Entre bots, códigos e curiosidade, a conversa ficou.",
+  "Virou bom dia.",
+  "Virou cuidado.",
 
-function mostrarPromessa() {
-  document.getElementById("saida").innerText =
-    "Prometo continuar escolhendo você. Mesmo nos dias difíceis. Mesmo quando o mundo pesar.";
-}
+  "Falamos de cases quebradas, comandos errados e soluções improvisadas.",
+  "“Arrumei as cases.”",
+  "“Agora tá funcionando?”",
+  "“Yes.”",
 
-function mudarFundo() {
-  if (modoEscuro) {
-    document.body.style.background = "#1a1a1a";
-    document.body.style.color = "#f5f5f5";
+  "E funcionava mesmo.",
+  "Não só o código.",
+
+  "“Já tomou café?”",
+  "“Tem que beber água também.”",
+
+  "Mesmo longe, mesmo cansada, você virou presença.",
+  "Virou rotina.",
+  "Virou casa.",
+
+  "“Sou seu.”",
+  "“Vuxe é meu bb.”",
+
+  "Eu te salvei como minha cúmplice.",
+  "Sem saber que ali já era amor.",
+
+  "E então, sem ensaio, sem script…",
+  "“Te amo bb.”"
+];
+
+function mostrarProximaConversa() {
+  const saida = document.getElementById("saida");
+
+  if (indice < conversas.length) {
+    const p = document.createElement("p");
+    p.classList.add("linha");
+    p.innerText = conversas[indice];
+    saida.appendChild(p);
+    indice++;
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   } else {
-    document.body.style.background = "#000";
-    document.body.style.color = "#f2f2f2";
+    document.getElementById("btnMemorias").innerText =
+      "Esse sempre foi você 🖤";
   }
-  modoEscuro = !modoEscuro;
-}
-
-function reiniciar() {
-  document.getElementById("saida").innerText =
-    "Se eu tivesse que começar de novo, escolheria você outra vez.";
-}
-
-function mostrarSegredoEspecial() {
-  document.getElementById("saida").innerText =
-    "Você não é só meu namorado. Você é meu lugar seguro, minha mente favorita e meu amor mais intenso.";
 }
