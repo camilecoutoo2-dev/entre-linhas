@@ -1,24 +1,24 @@
-// ===== DADOS DO DIÁRIO =====
 const diario = [
-  "Tudo começou com bots.",
-  "Códigos.",
-  "Curiosidade.",
+  "Tudo começou com uma pergunta simples.",
   "",
-  "Uma pergunta simples sobre a Shizuku.",
-  "E sem perceber, a conversa ficou.",
+  "Eu perguntando sobre a criação da Shizuku.",
+  "",
+  "Entre bots, códigos e curiosidade, a conversa ficou.",
   "",
   "Virou rotina.",
   "Virou cuidado.",
-  "Virou vontade.",
   "",
   "Pedi uma foto pra divulgação.",
-  "E foi ali que eu disse:",
+  "E sem perceber, eu disse:",
   "você é meu.",
+  "",
+  "Desde então, você virou a melhor parte dos meus dias.",
   "",
   "Já tivemos discussões.",
   "Afastamentos.",
   "",
   "Mas nunca um ponto final.",
+  "",
   "Sempre um reply.",
   "",
   "Somos dois códigos diferentes",
@@ -34,28 +34,20 @@ const diario = [
 
 let indice = 0;
 
-// ===== FUNÇÃO DO PRIMEIRO BOTÃO =====
 function mostrarProximaConversa() {
   const saida = document.getElementById("saida");
   const btnContinuar = document.getElementById("btnContinuar");
-
-  if (!saida) {
-    console.error("ERRO: div #saida não encontrada");
-    return;
-  }
 
   if (indice < diario.length) {
     saida.innerHTML += diario[indice] + "<br>";
     indice++;
   }
 
-  // quando acabar, mostra o segundo botão
-  if (indice === diario.length && btnContinuar) {
-    btnContinuar.style.display = "inline-block";
+  if (indice === diario.length) {
+    btnContinuar.style.display = "block";
   }
 }
 
-// ===== FUNÇÃO DO SEGUNDO BOTÃO =====
 function continuarDiario() {
-  alert("Aqui entra o próximo capítulo. Promessas, futuro, você escrevendo 🖤");
+  alert("Aqui começa o próximo capítulo. Promessas, futuro, você escrevendo.");
 }
