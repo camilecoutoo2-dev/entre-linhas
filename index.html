@@ -1,37 +1,40 @@
-let modoEscuro = true;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Você 🖤</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-function mostrarMensagem() {
-  document.getElementById("saida").innerText =
-    "Eu te amo porque com você eu posso ser intensa sem medo. Porque você entende meu silêncio e respeita meu caos.";
-}
+  <section class="container">
+    <h1>Para você</h1>
 
-function mostrarConversas() {
-  document.getElementById("saida").innerText =
-    "Tudo começou com bots, códigos e curiosidade… e sem perceber, você virou casa.";
-}
+    <div class="foto">
+      <!-- TROQUE o nome da imagem se for diferente -->
+      <img src="foto.jpg" alt="Ele">
+    </div>
 
-function mostrarPromessa() {
-  document.getElementById("saida").innerText =
-    "Prometo continuar escolhendo você. Mesmo nos dias difíceis. Mesmo quando o mundo pesar.";
-}
+    <p class="intro">
+      Três meses.  
+      A gente se encontrou por causa de bots…  
+      e virou sentimento.
+    </p>
 
-function mudarFundo() {
-  if (modoEscuro) {
-    document.body.style.background = "#1a1a1a";
-    document.body.style.color = "#f5f5f5";
-  } else {
-    document.body.style.background = "#000";
-    document.body.style.color = "#f2f2f2";
-  }
-  modoEscuro = !modoEscuro;
-}
+    <div class="botoes">
+      <button onclick="mostrarMensagem()">Por que eu te amo</button>
+      <button onclick="mostrarConversas()">Como tudo começou</button>
+      <button onclick="mostrarPromessa()">Minha promessa</button>
+      <button onclick="mudarFundo()">Mudar o clima</button>
+      <button onclick="reiniciar()">Reiniciar nossa história</button>
+    </div>
 
-function reiniciar() {
-  document.getElementById("saida").innerText =
-    "Se eu tivesse que começar de novo, escolheria você outra vez.";
-}
+    <p id="saida" class="saida"></p>
 
-function mostrarSegredoEspecial() {
-  document.getElementById("saida").innerText =
-    "Você não é só meu namorado. Você é meu lugar seguro, minha mente favorita e meu amor mais intenso.";
-}
+    <button class="secreto" onclick="mostrarSegredoEspecial()">⚠ Não clique</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
