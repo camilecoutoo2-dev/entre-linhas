@@ -1,43 +1,26 @@
+console.log("script carregado"); // DEBUG
+
 const textos = {
   mensagens: [
     "Tudo começou com bots.",
     "Códigos.",
-    "Curiosidade.",
-    "",
-    "Uma pergunta simples sobre a Shizuku.",
-    "E sem perceber, a conversa ficou.",
-    "",
-    "Virou rotina.",
-    "Virou cuidado.",
-    "Virou vontade."
+    "Curiosidade."
   ],
-
   autorais: [
-    "Percebi o quanto te queria no instante que trocamos nossas primeiras mensagens.",
-    "Você virou casa antes mesmo de saber.", 
-    "Você virou meu código preferido, virou minha paixão e meu domínio. "
+    "Percebi o quanto te queria no instante que trocamos nossas primeiras mensagens."
   ],
-
   poemas: [
-    "Somos dois códigos diferentes",
-    "que juntos fazem o universo funcionar."
+    "Somos dois códigos diferentes que juntos fazem o universo funcionar."
   ],
-
   promessas: [
-    "Prometo continuar escolhendo você.",
-    "Mesmo nos dias difíceis.",
-    "Mesmo quando o mundo pesar."
+    "Prometo continuar escolhendo você."
   ],
-
   futuro: [
-    "Planos simples.",
-    "Dias juntos.",
-    "E amor sem ponto final."
+    "Planos simples. Dias juntos. Amor sem ponto final."
   ],
-
   codigo: [
     "if (voce === meuAmor) {",
-    "  return 'Eu te escolho todos os dias.';",
+    "  return 'Eu te amo.';",
     "}"
   ]
 };
@@ -45,22 +28,37 @@ const textos = {
 let indice = 0;
 let atual = [];
 
-function iniciar() {
-  document.getElementById("inicio").style.display = "none";
-  document.getElementById("conteudo").classList.remove("oculto");
-}
+// ESPERA O HTML CARREGAR
+document.addEventListener("DOMContentLoaded", () => {
+
+  // BOTÃO START
+  document.getElementById("btnStart").addEventListener("click", () => {
+    document.getElementById("inicio").style.display = "none";
+    document.getElementById("conteudo").classList.remove("oculto");
+  });
+
+  // BOTÕES DO DIÁRIO
+  document.querySelectorAll("[data-secao]").forEach(botao => {
+    botao.addEventListener("click", () => {
+      const tipo = botao.dataset.secao;
+      abrirSecao(tipo);
+    });
+  });
+
+});
 
 function abrirSecao(tipo) {
+  const saida = document.getElementById("saida");
   indice = 0;
   atual = textos[tipo];
-  document.getElementById("saida").innerText = "";
-  revelarTexto();
+  saida.innerText = "";
+  revelarLinha();
 }
 
-function revelarTexto() {
+function revelarLinha() {
   if (indice < atual.length) {
     document.getElementById("saida").innerText += atual[indice] + "\n";
     indice++;
-    setTimeout(revelarTexto, 700);
+    setTimeout(revelarLinha, 700);
   }
 }
