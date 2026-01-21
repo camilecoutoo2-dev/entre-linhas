@@ -7,31 +7,30 @@
 </head>
 <body>
 
-  <!-- TELA DE ABERTURA -->
   <section id="inicio">
     <div class="overlay"></div>
     <div class="inicio-conteudo">
       <h1>Meu amor,<br>traduzido em códigos.</h1>
-      <button onclick="iniciar()">Start</button>
+      <button id="btnStart">Start</button>
     </div>
   </section>
 
-  <!-- TELA PRINCIPAL -->
   <section id="conteudo" class="oculto">
     <h2>Nosso Diário</h2>
 
     <div class="botoes">
-      <button onclick="abrirSecao('mensagens')">Nossas mensagens</button>
-      <button onclick="abrirSecao('autorais')">Textos autorais</button>
-      <button onclick="abrirSecao('poemas')">Poemas</button>
-      <button onclick="abrirSecao('promessas')">Promessas</button>
-      <button onclick="abrirSecao('futuro')">Planos</button>
-      <button onclick="abrirSecao('codigo')">Código final</button>
+      <button data-secao="mensagens">Nossas mensagens</button>
+      <button data-secao="autorais">Textos autorais</button>
+      <button data-secao="poemas">Poemas</button>
+      <button data-secao="promessas">Promessas</button>
+      <button data-secao="futuro">Planos</button>
+      <button data-secao="codigo">Código final</button>
     </div>
 
     <div id="saida" class="conteudo"></div>
   </section>
 
+  <!-- IMPORTANTE: script no FINAL -->
   <script src="script.js"></script>
 </body>
 </html>
