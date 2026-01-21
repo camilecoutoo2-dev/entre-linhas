@@ -2,29 +2,35 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Nosso Código</title>
+  <title>Meu amor, traduzido em códigos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Fundo escuro sobre a imagem -->
-  <div class="overlay"></div>
+  <!-- TELA DE ABERTURA -->
+  <section id="inicio">
+    <div class="overlay"></div>
+    <div class="inicio-conteudo">
+      <h1>Meu amor,<br>traduzido em códigos.</h1>
+      <button onclick="iniciar()">Start</button>
+    </div>
+  </section>
 
-  <main class="diario">
-    <h1>Nosso Diário</h1>
+  <!-- TELA PRINCIPAL -->
+  <section id="conteudo" class="oculto">
+    <h2>Nosso Diário</h2>
+
+    <div class="botoes">
+      <button onclick="abrirSecao('mensagens')">Nossas mensagens</button>
+      <button onclick="abrirSecao('autorais')">Textos autorais</button>
+      <button onclick="abrirSecao('poemas')">Poemas</button>
+      <button onclick="abrirSecao('promessas')">Promessas</button>
+      <button onclick="abrirSecao('futuro')">Planos</button>
+      <button onclick="abrirSecao('codigo')">Código final</button>
+    </div>
 
     <div id="saida" class="conteudo"></div>
-
-    <!-- BOTÃO 1 -->
-    <button id="btnMemorias" onclick="mostrarProximaConversa()">
-      Revelar nossas memórias
-    </button>
-
-    <!-- BOTÃO 2 -->
-    <button id="btnContinuar" onclick="continuarDiario()" style="display:none;">
-      Continuar lendo
-    </button>
-  </main>
+  </section>
 
   <script src="script.js"></script>
 </body>
