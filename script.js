@@ -1,53 +1,66 @@
-const diario = [
-  "Tudo começou com uma pergunta simples.",
-  "",
-  "Eu perguntando sobre a criação da Shizuku.",
-  "",
-  "Entre bots, códigos e curiosidade, a conversa ficou.",
-  "",
-  "Virou rotina.",
-  "Virou cuidado.",
-  "",
-  "Pedi uma foto pra divulgação.",
-  "E sem perceber, eu disse:",
-  "você é meu.",
-  "",
-  "Desde então, você virou a melhor parte dos meus dias.",
-  "",
-  "Já tivemos discussões.",
-  "Afastamentos.",
-  "",
-  "Mas nunca um ponto final.",
-  "",
-  "Sempre um reply.",
-  "",
-  "Somos dois códigos diferentes",
-  "que juntos fazem o universo funcionar.",
-  "",
-  "Você é meu melhor amigo.",
-  "Meu amor.",
-  "",
-  "E o meu código perfeito.",
-  "",
-  "Te amo."
-];
+const textos = {
+  mensagens: [
+    "Tudo começou com bots.",
+    "Códigos.",
+    "Curiosidade.",
+    "",
+    "Uma pergunta simples sobre a Shizuku.",
+    "E sem perceber, a conversa ficou.",
+    "",
+    "Virou rotina.",
+    "Virou cuidado.",
+    "Virou vontade."
+  ],
+
+  autorais: [
+    "Percebi o quanto te queria no instante que trocamos nossas primeiras mensagens.",
+    "Você virou casa antes mesmo de saber.", 
+    "Você virou meu código preferido, virou minha paixão e meu domínio. "
+  ],
+
+  poemas: [
+    "Somos dois códigos diferentes",
+    "que juntos fazem o universo funcionar."
+  ],
+
+  promessas: [
+    "Prometo continuar escolhendo você.",
+    "Mesmo nos dias difíceis.",
+    "Mesmo quando o mundo pesar."
+  ],
+
+  futuro: [
+    "Planos simples.",
+    "Dias juntos.",
+    "E amor sem ponto final."
+  ],
+
+  codigo: [
+    "if (voce === meuAmor) {",
+    "  return 'Eu te escolho todos os dias.';",
+    "}"
+  ]
+};
 
 let indice = 0;
+let atual = [];
 
-function mostrarProximaConversa() {
-  const saida = document.getElementById("saida");
-  const btnContinuar = document.getElementById("btnContinuar");
-
-  if (indice < diario.length) {
-    saida.innerHTML += diario[indice] + "<br>";
-    indice++;
-  }
-
-  if (indice === diario.length) {
-    btnContinuar.style.display = "block";
-  }
+function iniciar() {
+  document.getElementById("inicio").style.display = "none";
+  document.getElementById("conteudo").classList.remove("oculto");
 }
 
-function continuarDiario() {
-  alert("Aqui começa o próximo capítulo. Promessas, futuro, você escrevendo.");
+function abrirSecao(tipo) {
+  indice = 0;
+  atual = textos[tipo];
+  document.getElementById("saida").innerText = "";
+  revelarTexto();
+}
+
+function revelarTexto() {
+  if (indice < atual.length) {
+    document.getElementById("saida").innerText += atual[indice] + "\n";
+    indice++;
+    setTimeout(revelarTexto, 700);
+  }
 }
